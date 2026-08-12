@@ -16,7 +16,7 @@ const experiences = [
     dates: "May 2025 - Sep 2025",
     bullets: [
       "Conducted comprehensive market reviews to understand current trends and research areas for marine safe products.",
-      = "Collaborated with a product team on reef-safe formulations and evaluated sustainable toll manufacturers and packaging suppliers.",
+      "Collaborated with a product team on reef-safe formulations and evaluated sustainable toll manufacturers and packaging suppliers.",
     ],
   },
   {
