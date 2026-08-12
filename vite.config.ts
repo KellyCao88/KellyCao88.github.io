@@ -9,7 +9,7 @@ import react from '@vitejs/react-vite';
 
 export default defineConfig({
   // Highlight-start
-  base: '/your-repository-name/', 
+  base: '/KellyCao88.github.io/', 
   // Highlight-end
   plugins: [react()],
 });
