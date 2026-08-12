@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+import { AboutMe } from "@/components/AboutMe";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 
@@ -42,6 +43,7 @@ function Index() {
       <Header />
       <main>
         <Hero />
+        <AboutMe />
       </main>
     </>
   );
