@@ -53,6 +53,7 @@ function Index() {
         <Projects />
         <Skills />
         <Certifications />
+        <Coursework />
       </main>
     </>
   );
