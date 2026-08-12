@@ -24,12 +24,27 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
-      - name: Disable Jekyll
-        run: touch ./build/.nojekyll
+      - name: Find Build Folder and Disable Jekyll
+        id: build_dir
+        run: |
+          if [ -d "./dist" ]; then
+            touch ./dist/.nojekyll
+            echo "path=./dist" >> $GITHUB_OUTPUT
+          elif [ -d "./.output/public" ]; then
+            touch ./.output/public/.nojekyll
+            echo "path=./.output/public" >> $GITHUB_OUTPUT
+          elif [ -d "./build" ]; then
+            touch ./build/.nojekyll
+            echo "path=./build" >> $GITHUB_OUTPUT
+          else
+            echo "Error: Could not find output folder. Listing files:"
+            ls -la
+            exit 1
+          fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build
+          path: ${{ steps.build_dir.outputs.path }}
 
   deploy:
     environment:
