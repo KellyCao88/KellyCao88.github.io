@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { AboutMe } from "@/components/AboutMe";
 import { Certifications } from "@/components/Certifications";
+import { Connect } from "@/components/Connect";
 import { Coursework } from "@/components/Coursework";
 import { Experiences } from "@/components/Experiences";
 import { Header } from "@/components/Header";
