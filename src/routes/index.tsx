@@ -43,6 +43,7 @@ function Index() {
       <Header />
       <main>
         <Hero />
+        <AboutMe />
       </main>
     </>
   );
