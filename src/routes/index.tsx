@@ -55,6 +55,7 @@ function Index() {
         <Skills />
         <Certifications />
         <Coursework />
+        <Connect />
       </main>
     </>
   );
