@@ -30,7 +30,7 @@ export function Header() {
         "bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60",
       )}
     >
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-center px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-end px-4 sm:px-6 lg:justify-center lg:px-8">
         {/* Desktop navigation */}
         <nav className="hidden items-center gap-2 lg:flex">
           {navLinks.map((link) => (
