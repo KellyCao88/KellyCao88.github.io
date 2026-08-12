@@ -4,6 +4,7 @@ import { AboutMe } from "@/components/AboutMe";
 import { Experiences } from "@/components/Experiences";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { Projects } from "@/components/Projects";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -46,6 +47,7 @@ function Index() {
         <Hero />
         <AboutMe />
         <Experiences />
+        <Projects />
       </main>
     </>
   );
