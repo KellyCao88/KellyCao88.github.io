@@ -51,6 +51,7 @@ function Index() {
         <Experiences />
         <Projects />
         <Skills />
+        <Certifications />
       </main>
     </>
   );
