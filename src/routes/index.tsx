@@ -1,24 +1,48 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+import { Header } from "@/components/Header";
+import { Hero } from "@/components/Hero";
+
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: "Kelly Cao | Biomedical Engineer Portfolio" },
+      {
+        name: "description",
+        content:
+          "Portfolio of Kelly Cao, a Biomedical Engineer specializing in design, testing, and regulatory compliance.",
+      },
+      { property: "og:title", content: "Kelly Cao | Biomedical Engineer Portfolio" },
+      {
+        property: "og:description",
+        content:
+          "Portfolio of Kelly Cao, a Biomedical Engineer specializing in design, testing, and regulatory compliance.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:title",
+        content: "Kelly Cao | Biomedical Engineer Portfolio",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Portfolio of Kelly Cao, a Biomedical Engineer specializing in design, testing, and regulatory compliance.",
+      },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Header />
+      <main>
+        <Hero />
+      </main>
+    </>
   );
 }
