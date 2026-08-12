@@ -15,7 +15,7 @@ export function Hero() {
         </p>
 
         {/* Headline */}
-        <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
+        <h1 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl lg:whitespace-nowrap">
           Biomedical Engineer | Design, Testing, and Compliance
         </h1>
 

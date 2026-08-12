@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
   { label: "About", href: "#about" },
-  { label: "Professional Experiences", href: "#professional-experiences" },
+  { label: "Experiences", href: "#experiences" },
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
   { label: "Certifications", href: "#certifications" },
@@ -30,22 +30,14 @@ export function Header() {
         "bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60",
       )}
     >
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        {/* Logo */}
-        <a
-          href="#"
-          className="text-xl font-semibold tracking-tight text-foreground transition-colors hover:text-primary"
-        >
-          Kelly Cao
-        </a>
-
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-center px-4 sm:px-6 lg:px-8">
         {/* Desktop navigation */}
-        <nav className="hidden items-center gap-1 lg:flex">
+        <nav className="hidden items-center gap-2 lg:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
+              className="rounded-md px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
             >
               {link.label}
             </a>
