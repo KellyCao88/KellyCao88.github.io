@@ -5,17 +5,8 @@ export function AboutMe() {
       className="relative px-4 py-20 sm:px-6 lg:px-8"
     >
       <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
-        {/* Headshot placeholder */}
-        <div className="order-1 flex justify-center lg:order-none lg:justify-start">
-          <div className="grid aspect-[4/5] w-full max-w-sm place-items-center overflow-hidden rounded-xl bg-muted shadow-lg">
-            <span className="text-sm font-medium text-muted-foreground">
-              Professional headshot placeholder
-            </span>
-          </div>
-        </div>
-
         {/* Text content */}
-        <div className="order-2 lg:order-none">
+        <div className="order-1">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             About Me
           </h2>
@@ -28,6 +19,15 @@ export function AboutMe() {
             statistical quality control, quality systems, and regulatory frameworks, I am eager to
             collaborate with cross-functional teams to bring highly reliable solutions to market.
           </p>
+        </div>
+
+        {/* Headshot placeholder */}
+        <div className="order-2 flex justify-center lg:justify-end">
+          <div className="grid aspect-[4/5] w-full max-w-sm place-items-center overflow-hidden rounded-xl bg-muted shadow-lg">
+            <span className="text-sm font-medium text-muted-foreground">
+              Professional headshot placeholder
+            </span>
+          </div>
         </div>
       </div>
     </section>
