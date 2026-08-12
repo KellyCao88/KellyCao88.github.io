@@ -8,14 +8,14 @@ export function Hero() {
       id="hero"
       className="relative flex min-h-[calc(100vh-4rem)] items-center px-4 sm:px-6 lg:px-8"
     >
-      <div className="mx-auto max-w-4xl py-20 text-center">
+      <div className="mx-auto w-full max-w-6xl py-20 text-center">
         {/* Overline */}
         <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary">
           Portfolio of Kelly Cao
         </p>
 
         {/* Headline */}
-        <h1 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl lg:whitespace-nowrap">
+        <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl lg:whitespace-nowrap">
           Biomedical Engineer | Design, Testing, and Compliance
         </h1>
 
