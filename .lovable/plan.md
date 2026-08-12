@@ -7,6 +7,7 @@ Adjust the header and hero based on feedback: keep the headline on one line, rem
 
 1. **Header (`src/components/Header.tsx`)**
    - Remove the left-side "Kelly Cao" text logo.
+   - Rename the "Professional Experiences" nav link to "Experiences".
    - Expand the navigation: center the desktop nav links within the full header width and increase horizontal spacing between items so the section feels more open.
    - Keep the mobile hamburger menu unchanged.
 
