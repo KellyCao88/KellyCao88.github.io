@@ -20,6 +20,15 @@ export function AboutMe() {
             collaborate with cross-functional teams to bring highly reliable solutions to market.
           </p>
         </div>
+
+        {/* Headshot placeholder */}
+        <div className="order-2 flex justify-center lg:justify-end">
+          <div className="grid aspect-[4/5] w-full max-w-sm place-items-center overflow-hidden rounded-xl bg-muted shadow-lg">
+            <span className="text-sm font-medium text-muted-foreground">
+              Professional headshot placeholder
+            </span>
+          </div>
+        </div>
       </div>
     </section>
   );
