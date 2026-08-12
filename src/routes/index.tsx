@@ -49,6 +49,7 @@ function Index() {
         <AboutMe />
         <Experiences />
         <Projects />
+        <Skills />
       </main>
     </>
   );
