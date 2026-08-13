@@ -13,6 +13,7 @@ type Project = {
   badge: string;
   image?: string;
   link?: string;
+  paperLink?: string;
 };
 
 const projects: Project[] = [
