@@ -1,4 +1,4 @@
-import { Download, Linkedin, Mail } from "lucide-react";
+import { ExternalLink, Linkedin, Mail } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
@@ -16,11 +16,11 @@ const contactActions = [
     external: true,
   },
   {
-    label: "Download Resume",
+    label: "View Resume",
     href: "/Resume.pdf",
-    icon: Download,
+    icon: ExternalLink,
     external: true,
-    download: true,
+    download: false,
   },
 ];
 
