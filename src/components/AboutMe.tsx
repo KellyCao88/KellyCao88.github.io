@@ -27,7 +27,7 @@ export function AboutMe() {
             <img
               src="/professional-headshot.JPG"
               alt="Kelly Cao professional headshot"
-              className="absolute inset-0 h-full w-full origin-[center_20%] scale-[1.35] object-cover object-[center_20%]"
+              className="absolute inset-0 h-full w-full origin-[center_25%] scale-[1.6] object-cover object-[center_35%]"
             />
           </div>
         </div>
