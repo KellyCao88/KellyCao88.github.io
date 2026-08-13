@@ -34,7 +34,7 @@ export function Hero() {
         </p>
 
         {/* Headline */}
-        <h1 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl md:whitespace-nowrap">
+        <h1 className="mx-auto w-full text-center text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl md:whitespace-nowrap">
           Biomedical Engineer | Design, Testing, and Compliance
         </h1>
 
