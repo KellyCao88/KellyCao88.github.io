@@ -9,6 +9,15 @@ export function Hero() {
       className="relative flex min-h-[calc(100vh-4rem)] items-center px-4 sm:px-6 lg:px-8"
     >
       <div className="mx-auto w-full py-20 text-center">
+        {/* Circular headshot */}
+        <div className="mx-auto mb-6 h-44 w-44 overflow-hidden rounded-full border-4 border-primary/20 shadow-lg sm:h-48 sm:w-48">
+          <img
+            src="/professional-headshot.JPG"
+            alt="Kelly Cao professional headshot"
+            className="h-full w-full object-cover object-[center_58%]"
+          />
+        </div>
+
         {/* Overline */}
         <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary">
           Portfolio of Kelly Cao
