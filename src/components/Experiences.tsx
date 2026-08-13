@@ -51,11 +51,11 @@ export function Experiences() {
                 </div>
 
                 {/* Content */}
-                <div>
-                  <h3 className="text-lg font-bold text-slate-900">
+                <div className="rounded-lg border border-border bg-card p-5 shadow-sm">
+                  <h3 className="text-lg font-bold text-foreground">
                     {experience.title}
                   </h3>
-                  <p className="mt-1 text-sm text-slate-500">
+                  <p className="mt-1 text-sm text-muted-foreground">
                     {experience.company} | {experience.dates}
                   </p>
                   <ul className="mt-4 list-disc space-y-2 pl-5 text-base leading-relaxed text-muted-foreground">

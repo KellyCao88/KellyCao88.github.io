@@ -61,7 +61,7 @@ export function Projects() {
             <Card
               key={project.title}
               onClick={() => setSelected(project)}
-              className="flex h-full cursor-pointer flex-col overflow-hidden pt-0 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="flex h-full cursor-pointer flex-col overflow-hidden border border-border bg-card pt-0 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               role="button"
               tabIndex={0}
               aria-label={`Open details for ${project.title}`}

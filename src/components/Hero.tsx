@@ -6,9 +6,19 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-[calc(100vh-4rem)] items-center px-4 sm:px-6 lg:px-8"
+      className="relative flex min-h-[75vh] flex-col items-center justify-center px-4 py-12 sm:px-6 lg:px-8"
     >
-      <div className="mx-auto w-full py-20 text-center">
+      {/* Faint dot-grid pattern */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: "radial-gradient(circle, var(--primary) 1.5px, transparent 1.5px)",
+          backgroundSize: "28px 28px",
+        }}
+        aria-hidden="true"
+      />
+
+      <div className="relative mx-auto w-full max-w-2xl text-center">
         {/* Circular headshot */}
         <div className="mx-auto mb-6 h-44 w-44 overflow-hidden rounded-full border-4 border-primary/20 shadow-lg sm:h-48 sm:w-48">
           <img

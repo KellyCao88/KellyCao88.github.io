@@ -41,12 +41,17 @@ export function Connect() {
         <div className="mt-10 flex flex-col items-stretch justify-center gap-4 md:flex-row md:items-center">
           {contactActions.map((action) => {
             const Icon = action.icon;
+            const isResume = action.label === "Resume";
             return (
               <Button
                 key={action.label}
-                variant="outline"
+                variant={isResume ? "default" : "outline"}
                 size="lg"
-                className="h-12 gap-2 border-slate-400/50 bg-transparent px-6 text-base font-medium text-slate-50 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-slate-300 hover:bg-slate-800 hover:text-white hover:shadow-lg md:w-auto"
+                className={
+                  isResume
+                    ? "h-12 gap-2 px-6 text-base font-medium shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg md:w-auto"
+                    : "h-12 gap-2 border-slate-400/50 bg-transparent px-6 text-base font-medium text-slate-50 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-slate-300 hover:bg-slate-800 hover:text-white hover:shadow-lg md:w-auto"
+                }
                 asChild
               >
                 <a
