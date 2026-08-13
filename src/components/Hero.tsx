@@ -14,7 +14,7 @@ export function Hero() {
           <img
             src="/professional-headshot.JPG"
             alt="Kelly Cao professional headshot"
-            className="h-full w-full object-cover object-[center_30%]"
+            className="h-full w-full object-cover object-[center_58%]"
           />
         </div>
 
