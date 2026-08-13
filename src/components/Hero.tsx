@@ -42,7 +42,7 @@ export function Hero() {
             className="h-12 px-8 text-base shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
             asChild
           >
-            <a href="/resume.pdf" download>
+            <a href="/Resume.pdf" target="_blank" download>
               <Download className="mr-2 h-5 w-5" />
               Download Resume
             </a>
