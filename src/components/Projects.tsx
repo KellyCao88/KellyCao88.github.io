@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ExternalLink, HeartPulse } from "lucide-react";
+import { BookOpen, ExternalLink, HeartPulse } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -13,6 +13,7 @@ type Project = {
   badge: string;
   image?: string;
   link?: string;
+  paperLink?: string;
 };
 
 const projects: Project[] = [
@@ -24,6 +25,7 @@ const projects: Project[] = [
       "Designed patient-specific computational fluid dynamics (CFD) models from medical imaging to visualize hemodynamics in modeled regions of interest.",
     badge: "Imaging and Simulation",
     link: "#",
+    paperLink: "https://doi.org/10.1007/s00246-024-03443-7",
   },
   {
     title: "Dosing and Dispensing System",
@@ -132,6 +134,15 @@ export function Projects() {
                   <a href={selected.link} target="_blank" rel="noreferrer noopener">
                     View Project
                     <ExternalLink className="ml-2 h-4 w-4" />
+                  </a>
+                </Button>
+              )}
+
+              {selected.paperLink && (
+                <Button asChild variant="outline" className="w-fit">
+                  <a href={selected.paperLink} target="_blank" rel="noopener noreferrer">
+                    Read Published Paper
+                    <BookOpen className="ml-2 h-4 w-4" />
                   </a>
                 </Button>
               )}
