@@ -8,16 +8,6 @@ export function Hero() {
       id="hero"
       className="relative flex min-h-[75vh] flex-col items-center justify-center px-4 py-12 sm:px-6 lg:px-8"
     >
-      {/* Faint dot-grid pattern */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage: "radial-gradient(circle, var(--primary) 1.5px, transparent 1.5px)",
-          backgroundSize: "28px 28px",
-        }}
-        aria-hidden="true"
-      />
-
       {/* Ambient gradient orbs */}
       <div
         className="pointer-events-none absolute left-1/4 top-1/4 h-64 w-64 rounded-full bg-primary/20 blur-3xl"
