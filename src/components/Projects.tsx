@@ -84,7 +84,7 @@ export function Projects() {
                 </CardDescription>
 
                 {project.link && (
-                  <Button asChild variant="outline" className="mt-6 w-fit self-start">
+                  <Button asChild variant="outline" className="mt-auto pt-6 w-fit self-start">
                     <a href={project.link} target="_blank" rel="noreferrer noopener">
                       View Research
                       <ExternalLink className="ml-2 h-4 w-4" />
