@@ -44,7 +44,7 @@ export function Hero() {
           >
             <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
               <ExternalLink className="mr-2 h-5 w-5" />
-              View Resume
+              Resume
             </a>
           </Button>
         </div>
