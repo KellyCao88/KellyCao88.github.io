@@ -21,13 +21,13 @@ export function AboutMe() {
           </p>
         </div>
 
-        {/* Headshot placeholder */}
+        {/* Headshot */}
         <div className="order-2 flex justify-center lg:justify-end">
-          <div className="grid aspect-[4/5] w-full max-w-sm place-items-center overflow-hidden rounded-xl bg-muted shadow-lg">
-            <span className="text-sm font-medium text-muted-foreground">
-              Professional headshot placeholder
-            </span>
-          </div>
+          <img
+            src="/professional-headshot.JPG"
+            alt="Kelly Cao professional headshot"
+            className="aspect-[4/5] w-full max-w-sm rounded-xl object-cover shadow-lg"
+          />
         </div>
       </div>
     </section>
