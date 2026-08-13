@@ -4,11 +4,12 @@ import { ExternalLink, HeartPulse } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 type Project = {
   title: string;
   description: string;
+  fullDescription: string;
   badge: string;
   image?: string;
   link?: string;
@@ -19,6 +20,8 @@ const projects: Project[] = [
     title: "Patient-Specific Cardiovascular CFD",
     description:
       "Designed patient-specific computational fluid dynamics (CFD) models from medical imaging to visualize hemodynamics in modeled regions of interest.",
+    fullDescription:
+      "Developed patient-specific cardiovascular CFD workflows from medical imaging data to visualize and analyze hemodynamic behavior in regions of interest. The project involved image segmentation, mesh generation, boundary condition selection, and post-processing of flow fields to support clinical insight and device-related research. This work strengthened my ability to translate complex anatomical data into actionable engineering simulations while maintaining scientific rigor.",
     badge: "Imaging and Simulation",
     link: "#",
   },
@@ -26,6 +29,8 @@ const projects: Project[] = [
     title: "Dosing and Dispensing System",
     description:
       "Reviewed and modified previous CAD drawings and conducted iterative testing to improve volume and time efficiency of a bone graft dosing and dispensing system.",
+    fullDescription:
+      "Reviewed legacy CAD drawings and conducted iterative design and testing to improve the volume and time efficiency of a bone graft dosing and dispensing system. Activities included design for manufacturability, tolerance review, prototype evaluation, and test-data documentation to guide continuous improvement. This project reinforced my skills in sustaining engineering, design controls, and cross-functional communication.",
     badge: "Sustaining Engineering and Testing",
     image: "/senior-design-poster.png",
   },
@@ -33,13 +38,15 @@ const projects: Project[] = [
     title: "ECGformer Heartbeat Arrhythmia Classification",
     description:
       "Trained and evaluated a transformer-based encoder only model for the classification of heartbeat arrhythmias from a preprocessed dataset.",
+    fullDescription:
+      "Trained and evaluated a transformer-based encoder-only model for classifying heartbeat arrhythmias from a preprocessed ECG dataset. The project covered data preprocessing, model architecture selection, hyperparameter tuning, performance metrics analysis, and interpretation of classification results. It deepened my experience in machine learning for healthcare and in translating signal-processing problems into robust predictive pipelines.",
     badge: "Machine Learning",
     image: "/ece570-poster.png",
   },
 ];
 
 export function Projects() {
-  const [preview, setPreview] = useState<Project | null>(null);
+  const [selected, setSelected] = useState<Project | null>(null);
 
   return (
     <section id="projects" className="relative px-4 py-20 sm:px-6 lg:px-8">
@@ -52,21 +59,26 @@ export function Projects() {
           {projects.map((project) => (
             <Card
               key={project.title}
-              className="flex h-full flex-col overflow-hidden pt-0 shadow-md transition-transform duration-300 hover:-translate-y-1"
+              onClick={() => setSelected(project)}
+              className="flex h-full cursor-pointer flex-col overflow-hidden pt-0 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              role="button"
+              tabIndex={0}
+              aria-label={`Open details for ${project.title}`}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  setSelected(project);
+                }
+              }}
             >
               {project.image ? (
-                <button
-                  type="button"
-                  onClick={() => setPreview(project)}
-                  className="group aspect-video w-full overflow-hidden bg-muted focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                  aria-label={`View full poster for ${project.title}`}
-                >
+                <div className="group aspect-video w-full overflow-hidden bg-muted">
                   <img
                     src={project.image}
                     alt={`${project.title} poster`}
                     className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
                   />
-                </button>
+                </div>
               ) : (
                 <div className="flex aspect-video w-full items-center justify-center bg-gradient-to-br from-primary/15 via-secondary to-muted">
                   <HeartPulse className="h-14 w-14 text-primary" strokeWidth={1.5} />
@@ -82,30 +94,48 @@ export function Projects() {
                 <CardDescription className="text-base leading-relaxed">
                   {project.description}
                 </CardDescription>
-
-                {project.link && (
-                  <Button asChild variant="outline" className="mt-auto pt-6 w-fit self-start">
-                    <a href={project.link} target="_blank" rel="noreferrer noopener">
-                      View Research
-                      <ExternalLink className="ml-2 h-4 w-4" />
-                    </a>
-                  </Button>
-                )}
               </CardContent>
             </Card>
           ))}
         </div>
       </div>
 
-      <Dialog open={!!preview} onOpenChange={(open) => !open && setPreview(null)}>
-        <DialogContent className="max-w-5xl">
-          <DialogTitle className="text-base">{preview?.title}</DialogTitle>
-          {preview?.image && (
-            <img
-              src={preview.image}
-              alt={`${preview.title} full poster`}
-              className="max-h-[75vh] w-full object-contain"
-            />
+      <Dialog open={!!selected} onOpenChange={(open) => !open && setSelected(null)}>
+        <DialogContent className="max-h-[90vh] max-w-3xl overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle className="text-xl sm:text-2xl">{selected?.title}</DialogTitle>
+            {selected && <DialogDescription>{selected.badge}</DialogDescription>}
+          </DialogHeader>
+
+          {selected && (
+            <div className="space-y-6">
+              {selected.image ? (
+                <div className="w-full overflow-hidden rounded-lg bg-muted">
+                  <img
+                    src={selected.image}
+                    alt={`${selected.title} poster`}
+                    className="w-full object-contain"
+                  />
+                </div>
+              ) : (
+                <div className="flex aspect-video w-full items-center justify-center rounded-lg bg-gradient-to-br from-primary/15 via-secondary to-muted">
+                  <HeartPulse className="h-20 w-20 text-primary" strokeWidth={1.5} />
+                </div>
+              )}
+
+              <p className="text-base leading-relaxed text-foreground sm:text-lg">
+                {selected.fullDescription}
+              </p>
+
+              {selected.link && (
+                <Button asChild variant="outline" className="w-fit">
+                  <a href={selected.link} target="_blank" rel="noreferrer noopener">
+                    View Project
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </a>
+                </Button>
+              )}
+            </div>
           )}
         </DialogContent>
       </Dialog>
