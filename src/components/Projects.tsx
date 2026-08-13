@@ -37,10 +37,10 @@ const projects: Project[] = [
   {
     title: "ECGformer Heartbeat Arrhythmia Classification",
     description:
-      "Trained and evaluated a transformer-based encoder only model for the classification of heartbeat arrhythmias from a preprocessed dataset.",
+      "Trained and evaluated a transformer-based encoder-only model for the classification of heartbeat arrhythmias from a preprocessed dataset.",
     fullDescription:
       "Trained and evaluated a transformer-based encoder-only model for classifying heartbeat arrhythmias from a preprocessed ECG dataset. The project covered data preprocessing, model architecture selection, hyperparameter tuning, performance metrics analysis, and interpretation of classification results. It deepened my experience in machine learning for healthcare and in translating signal-processing problems into robust predictive pipelines.",
-    badge: "Machine Learning",
+    badge: "Machine Learning and Artificial Intelligence",
     image: "/ece570-poster.png",
   },
 ];
