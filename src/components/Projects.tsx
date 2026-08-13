@@ -25,6 +25,7 @@ const projects: Project[] = [
       "Designed patient-specific computational fluid dynamics (CFD) models from medical imaging to visualize hemodynamics in modeled regions of interest.",
     badge: "Imaging and Simulation",
     link: "#",
+    paperLink: "https://doi.org/10.1007/s00246-024-03443-7",
   },
   {
     title: "Dosing and Dispensing System",
