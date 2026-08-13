@@ -137,6 +137,15 @@ export function Projects() {
                   </a>
                 </Button>
               )}
+
+              {selected.paperLink && (
+                <Button asChild variant="outline" className="w-fit">
+                  <a href={selected.paperLink} target="_blank" rel="noopener noreferrer">
+                    Read Published Paper
+                    <BookOpen className="ml-2 h-4 w-4" />
+                  </a>
+                </Button>
+              )}
             </div>
           )}
         </DialogContent>
