@@ -24,7 +24,6 @@ const projects: Project[] = [
     fullDescription:
       "Designed patient-specific computational fluid dynamics (CFD) models from medical imaging to visualize hemodynamics in modeled regions of interest.",
     badge: "Imaging and Simulation",
-    link: "#",
     paperLink: "https://doi.org/10.1007/s00246-024-03443-7",
   },
   {
@@ -96,6 +95,19 @@ export function Projects() {
                 <CardDescription className="text-base leading-relaxed">
                   {project.description}
                 </CardDescription>
+                {project.paperLink && (
+                  <Button asChild variant="outline" className="mt-auto w-fit">
+                    <a
+                      href={project.paperLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      Read Published Paper
+                      <BookOpen className="ml-2 h-4 w-4" />
+                    </a>
+                  </Button>
+                )}
               </CardContent>
             </Card>
           ))}
