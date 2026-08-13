@@ -50,7 +50,7 @@ export function Skills() {
           {skillCategories.map((category) => (
             <Card
               key={category.headline}
-              className="rounded-lg border border-border bg-card shadow-md"
+              className="rounded-lg border border-border bg-card shadow-sm transition-shadow duration-300 hover:shadow-md"
             >
               <CardHeader>
                 <CardTitle className="text-lg font-semibold text-foreground">
