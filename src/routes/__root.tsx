@@ -116,7 +116,7 @@ function RootShell({ children }: { children: ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body>
+      <body className="min-h-screen bg-gradient-to-b from-blue-50 to-slate-50">
         {children}
         <Scripts />
       </body>
