@@ -43,7 +43,7 @@ export function Projects() {
                 <img
                   src={project.image}
                   alt={`${project.title} preview`}
-                  className="aspect-video w-full object-cover bg-muted"
+                  className="aspect-video w-full object-contain bg-muted"
                 />
               ) : (
                 <div className="aspect-video bg-muted flex items-center justify-center">
