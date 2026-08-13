@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const contactActions = [
   {
-    label: "Email Me",
+    label: "keca4089@gmail.com",
     href: "mailto:keca4089@gmail.com",
     icon: Mail,
     external: false,
