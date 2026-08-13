@@ -72,7 +72,7 @@ export function Projects() {
               }}
             >
               {project.image ? (
-                <div className="group aspect-video w-full overflow-hidden bg-slate-100">
+                <div className="group h-64 w-full overflow-hidden bg-gray-50 p-6">
                   <img
                     src={project.image}
                     alt={`${project.title} poster`}
@@ -80,7 +80,7 @@ export function Projects() {
                   />
                 </div>
               ) : (
-                <div className="flex aspect-video w-full items-center justify-center bg-gradient-to-br from-primary/15 via-secondary to-muted">
+                <div className="flex h-64 w-full items-center justify-center bg-gradient-to-br from-primary/15 via-secondary to-muted">
                   <HeartPulse className="h-14 w-14 text-primary" strokeWidth={1.5} />
                 </div>
               )}
