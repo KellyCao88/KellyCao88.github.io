@@ -21,6 +21,7 @@ const projects = [
     description:
       "Trained and evaluated a transformer-based encoder only model for the classification of heartbeat arrhythmias from a preprocessed dataset.",
     badge: "Machine Learning",
+    image: "/ece570-poster.png",
   },
 ];
 
