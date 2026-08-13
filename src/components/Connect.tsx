@@ -17,9 +17,9 @@ const contactActions = [
   },
   {
     label: "Download Resume",
-    href: "/resume.pdf",
+    href: "/Resume.pdf",
     icon: Download,
-    external: false,
+    external: true,
     download: true,
   },
 ];
