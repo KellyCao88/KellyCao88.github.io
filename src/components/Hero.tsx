@@ -18,7 +18,18 @@ export function Hero() {
         aria-hidden="true"
       />
 
-      <div className="relative mx-auto w-full max-w-2xl text-center">
+      {/* Ambient gradient orbs */}
+      <div
+        className="pointer-events-none absolute left-1/4 top-1/4 h-64 w-64 rounded-full bg-primary/20 blur-3xl"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute bottom-1/4 right-1/4 h-72 w-72 rounded-full bg-slate-400/20 blur-3xl"
+        aria-hidden="true"
+      />
+
+      {/* Glassmorphism content container */}
+      <div className="relative mx-auto w-full max-w-2xl rounded-3xl border border-slate-200 bg-white/70 p-10 text-center shadow-xl shadow-slate-200/50 backdrop-blur-md md:p-12">
         {/* Circular headshot */}
         <div className="mx-auto mb-6 h-44 w-44 overflow-hidden rounded-full border-4 border-primary/20 shadow-lg sm:h-48 sm:w-48">
           <img
@@ -34,7 +45,7 @@ export function Hero() {
         </p>
 
         {/* Headline */}
-        <h1 className="mx-auto w-full text-center text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl md:whitespace-nowrap">
+        <h1 className="mx-auto w-full text-center text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl">
           Biomedical Engineer | Design, Testing, and Compliance
         </h1>
 
