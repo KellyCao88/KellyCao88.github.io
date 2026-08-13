@@ -39,10 +39,17 @@ export function Projects() {
               key={project.title}
               className="overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-1"
             >
-              {/* Placeholder image */}
-              <div className="aspect-video bg-muted flex items-center justify-center">
-                <ImageIcon className="h-10 w-10 text-muted-foreground/40" />
-              </div>
+              {project.image ? (
+                <img
+                  src={project.image}
+                  alt={`${project.title} preview`}
+                  className="aspect-video w-full object-cover bg-muted"
+                />
+              ) : (
+                <div className="aspect-video bg-muted flex items-center justify-center">
+                  <ImageIcon className="h-10 w-10 text-muted-foreground/40" />
+                </div>
+              )}
 
               <CardHeader>
                 <CardTitle className="text-lg text-foreground">{project.title}</CardTitle>
