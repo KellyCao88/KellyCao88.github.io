@@ -23,11 +23,13 @@ export function AboutMe() {
 
         {/* Headshot */}
         <div className="order-2 flex justify-center">
-          <img
-            src="/professional-headshot.JPG"
-            alt="Kelly Cao professional headshot"
-            className="aspect-[2/1] w-full max-w-sm rounded-xl object-cover object-[center_10%] shadow-lg"
-          />
+          <div className="relative aspect-[3/4] w-full max-w-xs overflow-hidden rounded-xl shadow-lg">
+            <img
+              src="/professional-headshot.JPG"
+              alt="Kelly Cao professional headshot"
+              className="absolute inset-0 h-full w-full origin-[center_20%] scale-[1.35] object-cover object-[center_20%]"
+            />
+          </div>
         </div>
       </div>
     </section>
