@@ -12,9 +12,9 @@ export function Hero() {
         {/* Circular headshot */}
         <div className="mx-auto mb-6 h-44 w-44 overflow-hidden rounded-full border-4 border-primary/20 shadow-lg sm:h-48 sm:w-48">
           <img
-            src="/professional-headshot.JPG"
+            src="/professional-headshot-circle.JPG"
             alt="Kelly Cao professional headshot"
-            className="h-full w-full object-cover object-[center_58%]"
+            className="h-full w-full object-cover object-center"
           />
         </div>
 
