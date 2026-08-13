@@ -22,11 +22,11 @@ export function AboutMe() {
         </div>
 
         {/* Headshot */}
-        <div className="order-2 flex justify-center lg:justify-end">
+        <div className="order-2 flex justify-center">
           <img
             src="/professional-headshot.JPG"
             alt="Kelly Cao professional headshot"
-            className="aspect-[4/5] w-full max-w-sm rounded-xl object-cover shadow-lg"
+            className="aspect-[4/5] w-full max-w-sm rounded-xl object-cover object-[center_20%] shadow-lg"
           />
         </div>
       </div>
