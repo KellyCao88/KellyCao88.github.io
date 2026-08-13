@@ -16,7 +16,7 @@ const contactActions = [
     external: true,
   },
   {
-    label: "View Resume",
+    label: "Resume",
     href: "/Resume.pdf",
     icon: ExternalLink,
     external: true,
