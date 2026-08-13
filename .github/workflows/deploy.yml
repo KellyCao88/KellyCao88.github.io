@@ -27,10 +27,16 @@ jobs:
       - name: Build site
         run: npm run build
         
+      - name: Collect output
+        run: |
+          if [ -d ./.output/public ]; then cp -r ./.output/public ./_site;
+          elif [ -d ./dist/client ]; then cp -r ./dist/client ./_site;
+          else echo "No build output found" && exit 1; fi
+
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './.output/public'
+          path: './_site'
           
   deploy:
     environment:
