@@ -72,11 +72,11 @@ export function Projects() {
               }}
             >
               {project.image ? (
-                <div className="group aspect-video w-full overflow-hidden bg-muted">
+                <div className="group aspect-video w-full overflow-hidden bg-slate-100">
                   <img
                     src={project.image}
                     alt={`${project.title} poster`}
-                    className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                    className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
                   />
                 </div>
               ) : (
