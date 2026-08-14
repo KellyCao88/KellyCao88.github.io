@@ -14,32 +14,40 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Kelly Cao | Biomedical Engineer Portfolio" },
+      { title: "Kelly Cao | Engineering Portfolio" },
       {
         name: "description",
         content:
-          "Portfolio of Kelly Cao, a Biomedical Engineer specializing in design, testing, and regulatory compliance.",
+          "Biomedical Engineer (BS/MS) specializing in full-lifecycle product development, quality systems, and regulatory compliance. View my latest work and resume.",
       },
-      { property: "og:title", content: "Kelly Cao | Biomedical Engineer Portfolio" },
+      { property: "og:title", content: "Kelly Cao | Engineering Portfolio" },
       {
         property: "og:description",
         content:
-          "Portfolio of Kelly Cao, a Biomedical Engineer specializing in design, testing, and regulatory compliance.",
+          "Biomedical Engineer (BS/MS) specializing in full-lifecycle product development, quality systems, and regulatory compliance. View my latest work and resume.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://kelly-cao-folio.lovable.app/" },
+      {
+        property: "og:image",
+        content: "https://kelly-cao-folio.lovable.app/thumbnail-portfolio.png",
+      },
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:title",
-        content: "Kelly Cao | Biomedical Engineer Portfolio",
+        content: "Kelly Cao | Engineering Portfolio",
       },
       {
         name: "twitter:description",
         content:
-          "Portfolio of Kelly Cao, a Biomedical Engineer specializing in design, testing, and regulatory compliance.",
+          "Biomedical Engineer (BS/MS) specializing in full-lifecycle product development, quality systems, and regulatory compliance. View my latest work and resume.",
+      },
+      {
+        name: "twitter:image",
+        content: "https://kelly-cao-folio.lovable.app/thumbnail-portfolio.png",
       },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://kelly-cao-folio.lovable.app/" }],
   }),
 });
 
