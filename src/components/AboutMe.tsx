@@ -10,12 +10,11 @@ export function AboutMe() {
         </h2>
         <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
           I’m a Biomedical Engineering graduate (with an MS and BS) actively seeking entry-level
-          opportunities in regulatory affairs, quality engineering, test engineering, product
-          engineering, or systems engineering. I am interested in contributing towards
-          full-lifecycle product development and translating user needs into safe and high quality
-          products. Equipped with a Six Sigma Green Belt and a diverse toolkit across 3D modeling,
-          statistical quality control, quality systems, and regulatory frameworks, I am eager to
-          collaborate with cross-functional teams to bring highly reliable solutions to market.
+          opportunities where I can support full-lifecycle product development and translate user
+          needs into safe and high-quality products. Equipped with a Six Sigma Green Belt and a
+          diverse toolkit across 3D modeling, statistical quality control, quality systems, and
+          regulatory frameworks, I am eager to collaborate with cross-functional teams to bring
+          highly reliable solutions to market.
         </p>
       </div>
     </section>
