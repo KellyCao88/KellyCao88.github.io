@@ -33,14 +33,14 @@ const certifications: Certification[] = [
     url: "https://engineering.purdue.edu/Engr/Academics/Undergraduate/certificates/Milestones/Reverse_Engineering/2025/Fall/jEIKNCVvBDHivGgBLZv5tw.png",
   },
   {
-    name: "Google AI Essentials Certificate",
-    issued: "Issued August 2024",
-    url: "https://www.coursera.org/account/accomplishments/verify/P7CVABVA1EMN",
-  },
-  {
     name: "Completion Certificate - Job Interview in the AI-Era",
     issued: "Issued June 2026",
     url: "https://purdue.brightspace.com/d2l/awards/assertions/605741/view",
+  },
+  {
+    name: "Google AI Essentials Certificate",
+    issued: "Issued August 2024",
+    url: "https://www.coursera.org/account/accomplishments/verify/P7CVABVA1EMN",
   },
 ];
 
