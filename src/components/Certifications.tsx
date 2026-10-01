@@ -38,6 +38,11 @@ const certifications: Certification[] = [
     url: "https://purdue.brightspace.com/d2l/awards/assertions/605741/view",
   },
   {
+    name: "EBEC: Entry-Level Programming in Python",
+    issued: "Issued July 2026",
+    url: "https://engineering.purdue.edu/Engr/Academics/Undergraduate/certificates/Milestones/EBEC_Entry-Level_Programming_in_Python/2026/Spring/ngb24Jk0-qN1NjFPOlAqGA.png",
+  },
+  {
     name: "Google AI Essentials Certificate",
     issued: "Issued August 2024",
     url: "https://www.coursera.org/account/accomplishments/verify/P7CVABVA1EMN",
