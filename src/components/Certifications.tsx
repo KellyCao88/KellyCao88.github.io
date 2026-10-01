@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 
 type Certification = {
   name: string;
+  issued?: string;
   url?: string;
 };
 
@@ -13,22 +14,27 @@ const certifications: Certification[] = [
   },
   {
     name: "Six Sigma Green Belt Certificate",
+    issued: "Issued April 2026",
     url: "https://certificates.iise.org/673877b7-20ff-4dbf-a5be-b0a91ae6c674#acc.oml0t9Tn",
   },
   {
     name: "Finite Element Analysis Milestone Workshop Certificate",
+    issued: "Issued May 2026",
     url: "https://engineering.purdue.edu/Engr/Academics/Undergraduate/certificates/Milestones/Finite_Element_Analysis/2025/Spring/by_fgTBTeewcG8XSQCmwkw.png",
   },
   {
     name: "Geometric Dimensioning and Tolerancing Workshop Certificate",
+    issued: "Issued May 2026",
     url: "https://engineering.purdue.edu/Engr/Academics/Undergraduate/certificates/Milestones/Geometric_Dimensioning_and_Tolerancing/2025/Fall/2euHwcqglDtMqKV-oYPGzA.png",
   },
   {
     name: "Reverse Engineering Milestone Workshop Certificate",
+    issued: "Issued May 2026",
     url: "https://engineering.purdue.edu/Engr/Academics/Undergraduate/certificates/Milestones/Reverse_Engineering/2025/Fall/jEIKNCVvBDHivGgBLZv5tw.png",
   },
   {
     name: "Google AI Essentials Certificate",
+    issued: "Issued August 2024",
     url: "https://www.coursera.org/account/accomplishments/verify/P7CVABVA1EMN",
   },
 ];
@@ -51,8 +57,15 @@ export function Certifications() {
                 <div className="flex-shrink-0 rounded-full bg-primary/10 p-2.5">
                   <Award className="h-5 w-5 text-primary" />
                 </div>
-                <div className="flex-1 text-base font-medium leading-snug text-foreground">
-                  {certification.name}
+                <div className="flex-1">
+                  <div className="text-base font-medium leading-snug text-foreground">
+                    {certification.name}
+                  </div>
+                  {certification.issued && (
+                    <div className="mt-1 text-sm text-muted-foreground">
+                      {certification.issued}
+                    </div>
+                  )}
                 </div>
               </>
             );
