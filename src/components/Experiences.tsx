@@ -6,7 +6,7 @@ const experiences = [
     company: "Tha Data Mine",
     dates: "Aug 2025 - Dec 2025",
     bullets: [
-      "Programmed an automated dashboard for stakeholders using Python and PowerBi to track performance metrics.",
+      "Programmed an automated dashboard for stakeholders using Python and PowerBI to track performance metrics.",
       "Collaborated with the Innovative Medicine Hematology team to identify and visualize performance trends.",
     ],
   },
