@@ -1,6 +1,6 @@
 import { Award } from "lucide-react";
 
-import { Card, CardContent, CardTitle } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
 type Certification = {
   name: string;
@@ -33,21 +33,8 @@ const certifications: Certification[] = [
   },
 ];
 
-function CertificationCardContent({ certification }: { certification: Certification }) {
-  return (
-    <>
-      <div className="flex-shrink-0 rounded-full bg-primary/10 p-2.5">
-        <Award className="h-5 w-5 text-primary" />
-      </div>
-
-      <CardContent className="flex-1 p-0">
-        <CardTitle className="text-base font-medium leading-snug text-foreground">
-          {certification.name}
-        </CardTitle>
-      </CardContent>
-    </>
-  );
-}
+const cardClasses =
+  "flex items-start gap-4 rounded-lg border border-border bg-card p-5 text-card-foreground shadow-sm";
 
 export function Certifications() {
   return (
@@ -58,32 +45,42 @@ export function Certifications() {
         </h2>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {certifications.map((certification) =>
-            certification.url ? (
-              <Card
-                asChild
+          {certifications.map((certification) => {
+            const content = (
+              <>
+                <div className="flex-shrink-0 rounded-full bg-primary/10 p-2.5">
+                  <Award className="h-5 w-5 text-primary" />
+                </div>
+                <div className="flex-1 text-base font-medium leading-snug text-foreground">
+                  {certification.name}
+                </div>
+              </>
+            );
+
+            if (!certification.url) {
+              return (
+                <div key={certification.name} className={cardClasses}>
+                  {content}
+                </div>
+              );
+            }
+
+            return (
+              <a
                 key={certification.name}
-                className="cursor-pointer rounded-lg border border-border bg-card p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+                href={certification.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Verify ${certification.name}`}
+                className={cn(
+                  cardClasses,
+                  "cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-lg focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none",
+                )}
               >
-                <a
-                  href={certification.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Verify ${certification.name}`}
-                  className="flex items-start gap-4"
-                >
-                  <CertificationCardContent certification={certification} />
-                </a>
-              </Card>
-            ) : (
-              <Card
-                key={certification.name}
-                className="flex items-start gap-4 rounded-lg border border-border bg-card p-5 shadow-sm"
-              >
-                <CertificationCardContent certification={certification} />
-              </Card>
-            ),
-          )}
+                {content}
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>
