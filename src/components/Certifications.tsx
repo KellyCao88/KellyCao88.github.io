@@ -11,6 +11,7 @@ type Certification = {
 const certifications: Certification[] = [
   {
     name: "Regulatory Affairs and Regulatory Science for Medical Devices Graduate Certificate",
+    issued: "Issued May 2026",
   },
   {
     name: "Six Sigma Green Belt Certificate",
@@ -23,7 +24,7 @@ const certifications: Certification[] = [
     url: "https://engineering.purdue.edu/Engr/Academics/Undergraduate/certificates/Milestones/Finite_Element_Analysis/2025/Spring/by_fgTBTeewcG8XSQCmwkw.png",
   },
   {
-    name: "Geometric Dimensioning and Tolerancing Workshop Certificate",
+    name: "Geometric Dimensioning and Tolerancing Milestone Workshop Certificate",
     issued: "Issued May 2026",
     url: "https://engineering.purdue.edu/Engr/Academics/Undergraduate/certificates/Milestones/Geometric_Dimensioning_and_Tolerancing/2025/Fall/2euHwcqglDtMqKV-oYPGzA.png",
   },
@@ -41,6 +42,21 @@ const certifications: Certification[] = [
     name: "EBEC: Entry-Level Programming in Python",
     issued: "Issued July 2026",
     url: "https://engineering.purdue.edu/Engr/Academics/Undergraduate/certificates/Milestones/EBEC_Entry-Level_Programming_in_Python/2026/Spring/ngb24Jk0-qN1NjFPOlAqGA.png",
+  },
+  {
+    name: "CAD/3D Printing Milestone Workshop Certificate",
+    issued: "Issued October 2026",
+    url: "https://engineering.purdue.edu/Engr/Academics/Undergraduate/certificates/Milestones/CAD__3D_Printing/2026/Spring/C5J76rZ7eSgWgCmAAGk7ww.png",
+  },
+  {
+    name: "Engineering Leadership Fundamentals Milestone Workshop Certificate",
+    issued: "Issued October 2026",
+    url: "https://engineering.purdue.edu/Engr/Academics/Undergraduate/certificates/Milestones/Engineering_Leadership_Fundamentals/2026/Spring/mkcjYXAklFqNV26J6fBBdQ.png",
+  },
+  {
+    name: "Fundamentals of Mechanical Design Milestone Workshop Certificate",
+    issued: "Issued October 2026",
+    url: "https://engineering.purdue.edu/Engr/Academics/Undergraduate/certificates/Milestones/Fundamentals_of_Mechanical_Design/2026/Summer/AdK6PY1pQ08waPdvoL-UUw.png",
   },
   {
     name: "Google AI Essentials Certificate",
