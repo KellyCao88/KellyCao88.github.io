@@ -1,6 +1,7 @@
 import { ExternalLink, Linkedin, Mail } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { RESUME_URL } from "@/lib/resume";
 
 const contactActions = [
   {
@@ -17,7 +18,7 @@ const contactActions = [
   },
   {
     label: "Resume",
-    href: "/Resume.pdf",
+    href: RESUME_URL,
     icon: ExternalLink,
     external: true,
     download: false,

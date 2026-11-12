@@ -1,6 +1,7 @@
 import { ExternalLink } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { RESUME_URL } from "@/lib/resume";
 
 export function Hero() {
   return (
@@ -53,7 +54,7 @@ export function Hero() {
             className="h-12 px-8 text-base shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
             asChild
           >
-            <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
+            <a href={RESUME_URL} target="_blank" rel="noopener noreferrer">
               <ExternalLink className="mr-2 h-5 w-5" />
               Resume
             </a>
