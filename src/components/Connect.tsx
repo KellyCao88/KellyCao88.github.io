@@ -10,8 +10,8 @@ const contactActions = [
     external: false,
   },
   {
-    label: "linkedin.com/in/kelly-cao-490a031b8",
-    href: "https://www.linkedin.com/in/kelly-cao-490a031b8/",
+    label: "linkedin.com/in/kellycao88",
+    href: "https://www.linkedin.com/in/kellycao88/",
     icon: Linkedin,
     external: true,
   },
